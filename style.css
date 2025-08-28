@@ -350,6 +350,7 @@ body::after {
     var(--primary-color),
     var(--secondary-color)
   );
+  animation: gradientShift 3s ease infinite;
   padding: 4px;
   transition: all 0.3s ease;
   filter: brightness(1.1) contrast(1.1);
