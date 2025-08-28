@@ -117,7 +117,6 @@ body::after {
   text-decoration: none;
   letter-spacing: -1px;
   transition: all 0.3s ease;
-  font-family: 'JetBrains Mono', ;
 }
 
 .logo:hover {
@@ -227,7 +226,7 @@ body::after {
   gap: 20px;
   flex-wrap: wrap;
   opacity: 0;
-  animation: fadeInUp 1s ease 1s both;
+  animation: fadeInUp 1s ease 1s both, shine 1.2s ease forwards;
 }
 
 .btn {
@@ -251,42 +250,15 @@ body::after {
     var(--secondary-color)
   );
   color: white;
-  box-shadow: 0 4px 20px rgba(255, 99, 71, 0.3);
+  box-shadow: 0 4px 20px var(--primary-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-color: var(--border-color);
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(255, 99, 71, 0.4);
+  transform: translateY(-3px);  
+  box-shadow: 0 8px 30px var(--primary-color);
 }
-
-.btn-primary:hover::after {
-  animation: shine 1.2s ease forwards;
-  box-shadow: 0 8px 30px rgba(255, 99, 71, 0.4);
-}
-
-.btn-primary::after{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.6) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  transform: skewX(10deg);
-}
-
-@keyframes shine {
-  0% {
-    left: 150%;
-  }
-}
-
 
 .btn-secondary {
   background: transparent;
@@ -295,35 +267,19 @@ body::after {
 }
 
 .btn-secondary:hover {
-  background: var(--primary-color);
-  border-color: var(--primary-color);
-  transform: translateY(-3px);
-}
-
-.btn-secondary::after{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 60%;
-  height: 100%;
   background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.6) 50%,
-    rgba(255, 255, 255, 0) 100%
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
   );
-  transform: skewX(10deg);
-}
 
-.btn-secondary:hover::after{
-  animation: shine 1.2s ease forwards;
-}
-
-@keyframes shine  {
-  100% {
-    left: 150%;
-  }
+  transition: all 0.3s;
+  border-color: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  transform: translateY(-3px);
 }
 
 .hero-image {
@@ -344,21 +300,21 @@ body::after {
   border-radius: 50%;
   object-fit: cover;
   object-position: center 30%;
-  border: 4px solid transparent;
+  border: 4px;
   background: linear-gradient(
-    135deg,
+    180deg,
     var(--primary-color),
     var(--secondary-color)
   );
-  animation: gradientShift 3s ease infinite;
-  padding: 4px;
+  animation: gradientShift 6s ease infinite;
+  padding: 2px;
   transition: all 0.3s ease;
   filter: brightness(1.1) contrast(1.1);
 }
 
 .hero-image img:hover {
   transform: rotate(5deg) scale(1.05);  
-  box-shadow: 0 20px 40px rgba(255, 99, 71, 0.2);
+  box-shadow: 0 0 40px var(--primary-color);
 }
 
 .about-section {
@@ -496,7 +452,7 @@ body::after {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 99, 71, 0.1),
+    var(--secondary-color),
     transparent
   );
   transition: left 0.6s ease;
@@ -508,8 +464,8 @@ body::after {
 
 .skill-card:hover {
   transform: translateY(-10px);
-  border-color: var(--primary-color);
-  box-shadow: 0 20px 40px rgba(255, 99, 71, 0.2);
+  border-color: var(--secondary-color);
+  box-shadow: 0 20px 40px var(--secondary-color);
 }
 
 .skill-icon {
@@ -581,10 +537,10 @@ body::after {
 @keyframes pulse-glow {
   0%,
   100% {
-    box-shadow: 0 4px 20px rgba(255, 99, 71, 0.3);
+    box-shadow: 0 4px 20px var(--primary-color);
   }
   50% {
-    box-shadow: 0 4px 30px rgba(255, 99, 71, 0.5);
+    box-shadow: 0 4px 30px var(--secondary-color);
   }
 }
 
