@@ -111,23 +111,5 @@
     <div class="footer-bottom">
       <p>Bintang Syahri Mahardika 2025.</p>
     </div>
-    <script>
-      const starsContainer = document.querySelector(".stars");
-      const colors = ["#cc00ff", "#6600ff", "#0033ff", "#00ccff", "#00ffcc"];
-    
-      for (let i = 0; i < 30; i++) { 
-        const star = document.createElement("span");
-        const size = Math.random() * 6 + 2; 
-        star.style.width = size + "px";
-        star.style.height = size + "px";
-        star.style.top = Math.random() * 100 + "%";
-        star.style.left = Math.random() * 100 + "%";
-        star.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-        star.style.color = star.style.backgroundColor;
-        star.style.animationDelay = Math.random() * 5 + "s";
-        starsContainer.appendChild(star);
-      }
-    </script>
-
 </body>
 </html>
