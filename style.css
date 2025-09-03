@@ -132,13 +132,13 @@ body::after {
 }
 
 .navbar a {
-  position: relative;
-  font-size: 20px;
-  color: var(--text-secondary);
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  padding: 8px 0;
+    position: relative;
+    font-size: 20px;
+    color: var(--text-secondary);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 8px 0;
 }
 
 .navbar a:hover,
