@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lexend:wght@100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Serif+Text:ital@0;1&family=Lexend:wght@100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
   --primary-color: #cc00ff;
@@ -553,6 +552,11 @@ body::after {
     gap: 20px;
   }
 
+  .code-accent,
+  .btn-primary {
+    animation: none; /* Mematikan animasi glow dan pulse */
+  }
+
   .navbar a {
     font-size: 14px;
   }
@@ -599,7 +603,18 @@ body::after {
   .skills-section h2 {
     font-size: 2.2rem;
   }
+  
+  .about-content p {
+    padding: 20px;
+  }
+
+  .social-icons a {
+    font-size: 1.8rem; 
+    width: 48px; 
+    height: 48px; 
+  }
 }
+
 
 @keyframes fadeInUp {
   from {
@@ -676,6 +691,34 @@ body::after {
   background-size: 15px 15px;
   opacity: 0.1;
   animation: float 10s ease-in-out infinite;
+}
+
+.social-icons {
+  margin: 20px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-icons a {
+  color: var(--text-secondary);
+  font-size: 2.4rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a:hover {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 0 15px var(--primary-color);
 }
 
 .footer{
