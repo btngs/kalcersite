@@ -13,3 +13,9 @@
         star.style.animationDelay = Math.random() * 5 + "s";
         starsContainer.appendChild(star);
       }
+  
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+    menuToggle.addEventListener("click", () => {
+      navbar.classList.toggle("show");
+    });
