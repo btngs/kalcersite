@@ -63,7 +63,7 @@
 
   .code-accent,
   .btn-primary {
-    animation: none; /* Mematikan animasi glow dan pulse */
+    animation: none;
   }
 
   .navbar a {
@@ -93,7 +93,6 @@
 
   .hero-image img:hover {
     transform: none; 
-    box-shadow: 0 0 20px var(--primary-color);
   }
 
   .hero-buttons {
