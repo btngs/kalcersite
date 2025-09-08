@@ -20,6 +20,8 @@
 
     menuToggle.addEventListener("click", () => {
       navbar.classList.toggle("show");
+      menuToggle.classList.toggle("active");
+
       if (navbar.classList.contains("show")) {
         menuIcon.classList.remove("fa-bars");
         menuIcon.classList.add("fa-xmark");

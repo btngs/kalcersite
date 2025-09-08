@@ -1,9 +1,10 @@
 .menu-toggle {
-  display: none;
+  display: none; 
   font-size: 2rem;
   color: var(--text-primary);
   cursor: pointer;
   user-select: none;
+  transition: transform 0.4s ease;
 }
 
 .menu-toggle.active {
@@ -19,7 +20,6 @@
   }
 
   .navbar {
-    display: none; 
     flex-direction: column;
     background:rgba(26, 26, 26, 0.95);
     backdrop-filter: blur(10px);
@@ -40,7 +40,6 @@
     }
 
   .navbar.show {
-    display: flex; 
     gap: 15px;
     max-height: 500px;
     opacity: 1;
@@ -64,6 +63,10 @@
   .code-accent,
   .btn-primary {
     animation: none;
+  }
+
+  .scroll-indicator {
+    display: none;
   }
 
   .navbar a {
@@ -92,7 +95,8 @@
   }
 
   .hero-image img:hover {
-    transform: none; 
+    box-shadow: none;
+    transform: none;
   }
 
   .hero-buttons {
@@ -116,6 +120,11 @@
   .skills-section h2 {
     font-size: 2.2rem;
   }
+
+  .skill-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
   
   .about-content p {
     padding: 20px;
@@ -125,5 +134,9 @@
     font-size: 1.8rem; 
     width: 48px; 
     height: 48px; 
+  }
+
+  .project-card img{
+    height: 180px;
   }
 }
